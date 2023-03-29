@@ -1,0 +1,294 @@
+// @font-face
+//   font-family: "Ruberoid"
+//   src: local("../fonts/Ruberoid-ExtraBold"), url('../fonts/Ruberoid-ExtraBold.woff2') format("woff2"), url('../fonts/Ruberoid-ExtraBold.woff') format("woff"), url('../fonts/Ruberoid-ExtraBold.ttf') format("truetype")
+//   font-weight: 800
+//   font-style: normal
+
+// @font-face
+//   font-family: 'Uxum Grotesque'
+//   src: local("../fonts/UxumGrotesque-Regular"), url('../fonts/UxumGrotesque-Regular.woff2') format("woff2"), url('../fonts/UxumGrotesque-Regular.woff') format("woff"), url('../fonts/UxumGrotesque-Regular.ttf') format("truetype"), url('../fonts/UxumGrotesque-Regular.eot') format("eot")
+//   font-weight: 400
+//   font-style: normal
+
+// @font-face
+//   font-family: 'Uxum Grotesque'
+//   src: local("../fonts/UxumGrotesque-Medium"), url('../fonts/UxumGrotesque-Medium.woff2') format("woff2"), url('../fonts/UxumGrotesque-Medium.woff') format("woff"), url('../fonts/UxumGrotesque-Medium.ttf') format("truetype"), url('../fonts/UxumGrotesque-Medium.eot') format("eot")
+//   font-weight: 500
+//   font-style: normal
+
+// @font-face
+//   font-family: 'Uxum Grotesque'
+//   src: local("../fonts/UxumGrotesque-Bold"), url('../fonts/UxumGrotesque-Bold.woff2') format("woff2"), url('../fonts/UxumGrotesque-Bold.woff') format("woff"), url('../fonts/UxumGrotesque-Bold.ttf') format("truetype"), url('../fonts/UxumGrotesque-Bold.eot') format("eot")
+//   font-weight: 700
+//   font-style: normal
+
+//*** Typography ***//
+
+$logo-font: 'Ruberoid Extra',
+$heading-font: 'Uxum Grotesque',
+$body-font: 'Poppins',
+// $logo-font: 'Ruberoid',
+// $heading-font: 'Uxum Grotesque',
+// $body-font: 'Poppins',
+
+.ff-body
+  font-family: $body-font
+
+.ff-heading
+  font-family: $heading-font
+
+@mixin large
+  font-weight: 500
+  font-size: 22px
+  line-height: 118%
+  @media (max-width: 1199px)
+    font-size: 20px
+  @media (max-width: 991px)
+    font-size: 18px
+
+@mixin medium
+  font-weight: 400
+  font-size: 20px
+  line-height: 152%
+  @media (max-width: 991px)
+    font-size: 16px
+
+@mixin regular
+  font-weight: 400
+  font-size: 18px
+  line-height: 169%
+  @media (max-width: 991px)
+    font-size: 16px !important
+  @media (max-width: 575px)
+    font-size: 15px !important
+
+@mixin small
+  font-weight: 400
+  font-size: 16px
+  line-height: 162%
+  @media (max-width: 991px)
+    font-size: 14px
+
+@mixin xs
+  font-weight: 400
+  font-size: 14px
+  line-height: 150%
+
+body
+  font-family: $body-font
+  @include small
+
+.large
+  @include large
+
+.medium
+  @include medium
+
+.regular
+  @include regular
+
+.small
+  @include small
+
+.xs
+  @include xs
+
+p.heading
+  font-family: $heading-font
+  font-weight: 500
+  font-size: 25px
+  line-height: 159.5%
+  letter-spacing: 0.05em
+  &::before
+    display: block
+    content: ''
+    width: 51px
+    height: 4px
+    background: $primary
+    border-radius: 2px
+    margin-bottom: 1.75rem
+  @media (max-width: 1199px)
+    font-size: 20px
+  @media (max-width: 991px)
+    font-size: 18px
+    margin-bottom: 2rem
+    &::before
+      display: none
+  @media (max-width: 575px)
+    font-size: 18px
+    line-height: 168%
+    text-align: justify
+    letter-spacing: 0.02em
+
+h2.heading
+  &::after
+    display: block
+    content: ''
+    width: 54px
+    height: 5px
+    margin: 1.75rem auto 0
+    background: $primary
+    border-radius: 3px
+    @media (max-width: 575px)
+      width: 31px
+      height: 3px
+      // margin: 1.5rem auto 1rem
+      margin: 1.5rem auto 2rem
+
+h4.heading
+  &::after
+    display: block
+    content: ''
+    width: 211px
+    height: 3px
+    margin: 2rem 0
+    background: linear-gradient(to right, #0E51FF, #C36E9C)
+    border-radius: 2px
+    @media (max-width: 575px)
+      width: 100%
+      height: 2px
+      margin: .5rem 0 1.5rem
+
+ul.icon-list
+  list-style: none
+  width: intrinsic
+  width: -moz-max-content
+  width: -webkit-max-content
+  width: fit-content
+  margin: 0 auto
+  li
+    padding: 2rem 1rem 2rem 4.5rem
+    position: relative
+    font-size: 25px
+    line-height: 154%
+    color: $neutral-80
+    .icon
+      position: absolute
+      top: 2.25rem
+      left: 1rem
+      width: 1.75rem
+      height: 1.75rem
+  @media (max-width: 1199px)
+    li
+      font-size: 20px
+      .icon
+        top: 1rem
+  @media (max-width: 575px)
+    li
+      padding: 1.5rem .75rem 1.5rem 3rem
+      font-size: 16px
+      .icon
+        top: 1.55rem
+        width: 1.25rem
+        height: 1.25rem
+        left: .75rem
+
+h1
+  font-family: $heading-font
+  font-weight: 500
+  font-size: 60px
+  line-height: 125%
+  letter-spacing: 0.035em
+  margin-bottom: 3rem
+  .bold
+    font-weight: 700
+  @media (max-width: 1199px)
+    font-size: 45px
+    letter-spacing: 0
+    min-height: 168px
+  @media (max-width: 575px)
+    font-size: 45px
+    min-height: 224px
+
+h2
+  font-family: $heading-font
+  font-weight: 500
+  font-size: 50px
+  line-height: 56px
+  margin-bottom: 1rem
+  .bold
+    font-weight: 700
+  @media (max-width: 1199px)
+    font-size: 40px
+    line-height: 44px
+  @media (max-width: 991px)
+    font-size: 32px
+    line-height: 34px
+  @media (max-width: 575px)
+    font-size: 25px
+    line-height: 25px
+
+h3
+  font-family: $heading-font
+  font-weight: 400
+  font-size: 40px
+  line-height: 115%
+  .bold
+    font-weight: 700
+  @media (max-width: 991px)
+    font-size: 25px
+
+h4
+  font-family: $heading-font
+  font-weight: 400
+  font-size: 34px
+  line-height: 42px
+  @media (max-width: 991px)
+    font-size: 25px
+    line-height: 150%
+  @media (max-width: 575px)
+    font-size: 18px
+    line-height: 27px
+
+h5
+  font-family: $heading-font
+  font-weight: 400
+  font-size: 28px
+  line-height: 34px
+
+b
+  font-weight: 600 !important
+
+a
+  display: inline-block
+  color: $primary
+  text-decoration: none
+  transition: color ease-out .2s
+  &:hover
+    color: $primary-80
+
+p
+  a
+    &:hover
+      text-decoration: underline
+
+hr
+  border: 0
+  border-top: 1px solid rgba($neutral, 0.1)
+  margin: 22px 0 60px
+
+.fw-bold
+  font-weight: 700
+
+.fw-semibold
+  font-weight: 600
+
+.fw-medium
+  font-weight: 500
+
+.fw-regular
+  font-weight: 400
+
+.scale-1-2
+  transform: scale(1.2)
+
+.scale-1-3
+  transform: scale(1.3)
+
+.scale-1-4
+  transform: scale(1.4)
+
+.scale-1-5
+  transform: scale(1.5)
+
+//*** Typography ***//

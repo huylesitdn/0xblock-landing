@@ -1,0 +1,95 @@
+form
+    padding: 5.5rem 5rem 7.5rem
+    color: $neutral
+    @media (max-width: 991px)
+        padding: 4rem 2rem 5rem
+
+input:not(.btn), textarea, select
+    font-family: $body-font !important
+    display: block
+    border: 0
+    outline: 0
+    border-bottom: 1px solid $neutral-20
+    border-radius: 0 !important
+    padding: .5rem 0 1rem
+    margin-top: .25rem !important
+    width: 100%
+    transition: border ease-out .2s
+    appearance: none
+    color: $neutral
+    &:active, &:focus
+        border-bottom-color: rgba($neutral, .66)
+
+input::placeholder
+   color: rgba($neutral, .49) !important
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+    box-shadow: $primary-20 !important
+    border-radius: 0 !important
+
+select
+   -webkit-appearance: none
+   -moz-appearance: none
+   appearance: none
+   background: $white !important
+   border-radius: 0
+   color: $neutral
+
+label.select
+    position: relative
+    &::after
+        display: block
+        content: ''
+        width: 12px
+        height: 6px
+        position: absolute
+        right: .25rem
+        bottom: 1.5rem
+        background: center / contain no-repeat url('../images/select-icon.svg')
+
+label
+    @include small
+    display: block
+    margin-bottom: 47px
+
+label.checkbox
+    color: rgba($neutral, .49)
+    padding-left: 1.5rem
+    position: relative
+    cursor: pointer
+    a
+        color: inherit
+
+input[type="checkbox"]
+    display: none
+    position: relative
+    & + span
+        display: inline-block
+        position: absolute
+        left: 0
+        top: .25rem
+        width: 15px
+        height: 15px
+        background: $white
+        border: 1px solid #9999A2
+        border-radius: 3px
+
+input[type="checkbox"]:checked
+    & + span
+        border: 0
+        background: center / contain no-repeat url('../images/checkbox-done.svg')
+
+.form
+    border-radius: 1rem
+    &-element::placeholder
+        @include small
+        color: rgba($neutral, .49) !important
+    &-approval
+        padding: 5.5rem 5rem 7.5rem
+        color: $neutral
+        text-align: center
+        h5
+            margin-bottom: 1rem

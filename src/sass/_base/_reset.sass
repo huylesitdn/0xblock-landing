@@ -1,0 +1,90 @@
+// set box-sizing ==============================================
+html
+  box-sizing: border-box
+  scroll-behavior: smooth
+
+*, *:before, *:after
+  box-sizing: inherit
+
+// hide placeholder on focus _form tags ===========================
+input:focus,
+textarea:focus
+  transition: color 0 ease
+
+// image-moves-on-hover-chrome-opacity-issue ===================
+// https://stackoverflow.com/questions/12980153/image-moves-on-hover-chrome-opacity-issue
+img
+  -webkit-backface-visibility: hidden
+
+// elements reset  =============================
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  margin: 0
+  padding: 0
+
+// h tags normalize ============================================
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-size: 100%
+  font-weight: normal
+
+// forms elements reset ========================================
+button,
+input,
+select,
+textarea
+  margin: 0
+
+// media elements reset ========================================
+img,
+embed,
+iframe,
+object,
+audio,
+video
+  height: auto
+  max-width: 100%
+
+iframe
+  border: 0 none
+
+// table tag reset ==============================================
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+td,
+th
+  padding: 0
+  text-align: left
+
+button
+  border: 0
+  background: 0 0
+  cursor: pointer

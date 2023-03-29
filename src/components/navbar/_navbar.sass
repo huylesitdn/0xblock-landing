@@ -1,0 +1,201 @@
+.header
+    z-index: 999
+    position: relative
+    top: 0
+    left: 0
+    width: 100%
+    box-shadow: 0px 12px 39px transparent
+    background: 0 0
+    transition: box-shadow ease-out .2s
+
+    .btn-launch-app
+        display: none
+
+    &.fixed
+        position: fixed
+        // box-shadow: 0px 12px 39px rgba($neutral, 0.1)
+        background: rgba($white, .9)
+        -webkit-backdrop-filter: blur(10px)
+        .btn-launch-app
+            display: block
+        .header__inner
+            padding: 1rem 0
+            transition: padding ease-out .2s
+    &__inner
+        padding: 1.5rem 0
+        display: flex
+        justify-content: space-between
+    &__logo
+        display: flex
+        align-self: center
+        text-decoration: none
+        align-self: center
+        > * 
+            align-self: center
+        span
+            position: relative
+            font-family: $logo-font
+            font-weight: 800
+            font-size: 23px
+            line-height: 30px
+            top: 2px
+            margin-left: 10px
+            color: $neutral
+    .logo__icon
+        width: 34px
+        height: 34px
+    @media (max-width: 768px)
+        .btn-launch-app
+            display: block
+    @media (max-width: 991px)
+        &__inner
+            padding: .75rem 0
+            flex-wrap: wrap
+        .logo
+            &__icon
+                width: 26px
+                height: 26px
+            span
+                font-size: 18px
+                line-height: 26px
+                top: 2px
+
+.logo
+    &__icon
+        background: center / contain no-repeat url('../images/logo.svg')
+
+.menu
+    position: relative
+    width: 48px
+    height: 48px
+    margin-right: -12px
+    cursor: pointer
+    &__shape
+        position: absolute
+        right: 12px
+        height: 3px
+        background: $neutral
+        border-radius: 2px
+        transition: all ease-out .2s
+    &__shape-1
+        top: 20px
+        width: 13px
+    &__shape-2
+        top: 27px
+        width: 23px
+    &.active
+        .menu__shape-1
+            top: 24px
+            width: 23px
+            transform: rotate(45deg)
+        .menu__shape-2
+            top: 24px
+            width: 23px
+            transform: rotate(-45deg)
+
+.navigation
+    min-height: 55px
+    height: 100%
+    display: flex
+    place-items: center
+    &-static
+        .navigation__list
+            margin-top: 0 !important
+    &__list
+        display: flex
+        list-style: none
+    &__item
+        margin-right: 3rem
+        font-size: 16px
+        line-height: 26px
+        align-self: center
+        a:not(.btn)
+            color: $black
+            transition: color ease-out .2s
+            text-decoration: none
+            &:hover
+                color: $primary
+                cursor: pointer
+        &:last-child
+            margin-right: 0
+    @media (max-width: 991px)
+        min-height: auto
+        flex-basis: 100%
+        display: flex
+        overflow: hidden
+        &__list
+            flex-direction: column
+            padding-top: 3.25rem
+            width: 100%
+            margin-top: -300%
+        &__item
+            margin-right: 0
+            margin-bottom: 43px
+            align-self: flex-start
+
+            @media ( max-width: 425px )
+              margin-bottom: 25px
+              
+.faqs,
+.contact,
+.whitepaper,
+.coming-soon,
+.homepage
+    .header
+        .container
+            max-width: none
+            padding-left: 0
+            padding-right: 0
+
+            .header__inner
+                padding-left: 75px !important
+                padding-right: 75px !important
+
+                @media (max-width: 575px)
+                    padding-left: 15px !important
+                    padding-right: 15px !important
+
+.contact
+    .header
+        &__logo
+            span
+                color: $white
+        .logo
+            &__icon
+                background: center / contain no-repeat url('../images/logo-white.svg')
+        .menu
+            &__shape
+                background: $white
+        .navigation
+            &__item
+                a:not(.btn)
+                    color: $white
+                    &:hover
+                        color: $white
+        &.fixed
+            box-shadow: 0px 12px 39px rgba($neutral, 0.1)
+            background: $white
+            .header__inner
+                padding: 1rem 0
+            .header__logo
+                span
+                    color: $neutral
+            .logo
+                &__icon
+                    background: center / contain no-repeat url('../images/logo.svg')
+            .menu
+                &__shape
+                    background: $neutral
+            .navigation
+                &__item
+                    a:not(.btn)
+                        color: $neutral
+                        &:hover
+                            color: $neutral
+
+.showMenu
+  @media (max-width: 768px)
+    position: fixed
+    bottom: 0
+    background: #fff 
+    overflow: auto

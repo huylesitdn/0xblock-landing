@@ -1,0 +1,107 @@
+.slide-from-left
+  position: relative
+  transform: translateX(-100%)
+  opacity: 0
+
+.slide-from-left-short
+  position: relative
+  transform: translateX(-2rem)
+  opacity: 0
+
+.slide-from-right
+  position: relative
+  transform: translateX(100%)
+  opacity: 0
+
+.slide-from-right-short
+  position: relative
+  transform: translateX(2rem)
+  opacity: 0
+
+.slide-from-bottom
+  position: relative
+  transform: translateY(4rem)
+  opacity: 0
+
+.slide-from-bottom-short
+  position: relative
+  transform: translateY(2rem)
+  opacity: 0
+
+.slide-from-top
+  position: relative
+  transform: translateY(-4rem)
+  opacity: 0
+
+.slide-from-top-short
+  position: relative
+  transform: translateY(-2rem)
+  opacity: 0
+
+.slide-rotate
+  position: relative
+  transform: rotate(-150deg)
+  opacity: 0
+
+.typed-cursor
+  color: $primary !important
+
+.fade-out
+  animation: fadeOutAnimation ease 3s
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+
+@keyframes fadeOutAnimation
+  0%
+    opacity: 1
+
+  100%
+    opacity: 0
+
+.fade-in
+  animation: fadeInAnimation ease 3s
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+
+@keyframes fadeInAnimation
+  0%
+    opacity: 0
+
+  50%
+    opacity: 1
+
+.fade-in-right
+  animation: fadeInRightAnimation ease 3s
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+
+@keyframes fadeInRightAnimation
+  0%
+    opacity: 0
+    transform: translateX(100px)
+
+  30%
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes updown
+  0%
+    transform: translateY(-70%)
+
+  50%
+    transform: translateY(70%)
+
+  100%
+    transform: translateY(-70%)
+
+.spinner 
+  width: 1.5rem
+  height: 1.5rem
+  border-radius: 50%
+  border: 0.3rem solid rgba(#979fd0, 0.3)
+  border-top-color: #979fd0
+  animation: 1.5s spin infinite linear
+  
+@keyframes spin 
+  to 
+    transform: rotate(360deg)

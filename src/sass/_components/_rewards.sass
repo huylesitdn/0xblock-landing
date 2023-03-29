@@ -1,0 +1,60 @@
+.rewards-section
+    margin-bottom: calc(2000px + 16rem)
+    @media (max-width: 991px)
+        margin-bottom: 5rem
+
+.pin-spacer
+    width: 100% !important
+    
+.rewards-container
+    padding-bottom: 80px
+    .bg.bg-white.bg-shadow 
+        padding-top: 2rem
+        padding-bottom: 2rem
+        &.disabled
+            padding-top: 0
+            padding-bottom: 0
+        & > div
+            overflow: hidden
+            padding-top: 3rem
+            padding-bottom: 2rem
+
+    @media (max-width: 992px)
+        position: relative
+        .scrollbar-track
+            display: none !important
+        &__inner
+            display: flex
+            flex-direction: row
+            flex-wrap: nowrap
+            padding-bottom: 20px
+            position: relative
+            > div
+                flex: 0 0 calc(200px + 4rem)
+            > div:first-child
+                padding-left: calc(50% - 100px - 2rem)
+            > div:last-child
+                padding-right: calc(50% - 100px - 2rem)
+    @media (max-width: 575px)
+        &__inner
+            display: flex
+            flex-direction: row
+            flex-wrap: nowrap
+            padding-bottom: 20px
+            position: relative
+            .large
+                margin-left: -20px !important
+            > div
+                flex: 0 0 calc(160px + 2rem)
+                img
+                    width: 160px !important
+                    height: 160px !important
+            > div:first-child
+                // padding-left: calc(50% - 80px - 1rem)
+                padding-left: 40px
+            > div:last-child
+                padding-right: 0
+        p
+            line-height: 200%
+            font-size: 16px !important
+        

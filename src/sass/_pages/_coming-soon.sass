@@ -1,0 +1,134 @@
+.coming-soon
+  min-height: 100vh
+  overflow: hidden
+  position: relative
+  @media (max-width: 991px)
+    .navigation-list
+      display: flex
+      place-content: center
+      list-style: none
+      padding-top: 50px
+      max-height: 50px
+      place-items: center
+      li
+        padding-left: 10px
+        padding-right: 10px
+  @media (max-width: 991px)
+    .header__inner
+      place-content: center
+      padding-top: 30px
+      .header__menu 
+        display: none
+  &__bg
+    position: absolute !important
+    z-index: -1
+    &__1
+      bottom: 0
+      left: 0
+    &__2
+      top: 0
+      right: 0
+  .head
+    display: flex
+    place-content: center
+    place-items: center
+    .coming-soon-content
+      position: relative
+      text-align: center
+      .icon
+        position: absolute !important
+        width: auto
+        height: auto
+        &.icon-1
+          top: 50%
+          left: -50%
+          @media (max-width: 1024px)
+            top: 50%
+            left: -30%
+          @media (max-width: 820px)
+            top: 50%
+            left: -20%
+          @media (max-width: 768px)
+            top: 50%
+            left: auto
+            right: -10%
+          @media (max-width: 575px)
+            top: 50%
+            left: auto
+            right: 10px
+            max-width: 30px
+        &.icon-2
+          bottom: 0
+          left: -20%
+          @media (max-width: 1024px)
+            bottom: 0
+            left: -20%
+          @media (max-width: 768px)
+            bottom: 20%
+            left: 0
+          @media (max-width: 575px)
+            bottom: 12%
+            left: 15px
+            max-width: 25px
+        &.icon-3
+          bottom: 20%
+          right: -50%
+          @media (max-width: 1024px)
+            bottom: 20%
+            right: -30%
+          @media (max-width: 820px)
+            bottom: 20%
+            right: -20%
+          @media (max-width: 768px)
+            bottom: 0
+            right: -20%
+            max-width: 30px
+          @media (max-width: 575px)
+            bottom: 0
+            right: 30px
+            max-width: 25px
+        &.icon-4
+          top: 0
+          left: 0
+          @media (max-width: 575px)
+            top: -15px
+            left: 25px
+            max-width: 40px
+      .img-content
+        padding-bottom: 40px
+        @media (max-width: 575px)
+          width: 80%
+          margin: auto
+      h1
+        font-style: normal
+        font-weight: bold
+        font-size: 55px
+        line-height: 125%
+        padding-bottom: 40px
+        margin: 0
+        @media (max-width: 768px)
+          min-height: auto
+          padding-bottom: 0
+          font-size: 34px
+          line-height: 125%
+      h3
+        font-style: normal
+        font-weight: normal
+        font-size: 34px
+        line-height: 125%
+        padding-bottom: 40px
+        margin: 0
+        @media (max-width: 768px)
+          font-size: 27px
+          line-height: 125%
+      a
+        font-size: 20px
+        line-height: 125%
+        text-align: center
+        letter-spacing: 0.05em
+        text-decoration-line: underline
+        color: rgba(31, 31, 57, 0.65)
+        padding-bottom: 40px
+        @media (max-width: 768px)
+          font-size: 17px
+          line-height: 125%

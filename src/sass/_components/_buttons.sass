@@ -1,0 +1,57 @@
+button
+    font-family: $body-font !important
+    
+.btn
+    width: intrinsic
+    width: -moz-max-content
+    width: -webkit-max-content
+    width: fit-content
+    padding: 0
+    margin: 0
+    border: 0
+    border-radius: 15px
+    font-size: 18px
+    line-height: 27px
+    padding: .75rem 1.25rem
+    transition: all ease-out .2s
+    text-decoration: none
+    cursor: pointer
+    &-wide
+        padding: 15px 50px 
+        @include small
+        font-weight: 600
+    &-primary
+        background: $white
+        border: 2px solid $primary
+        color: $primary
+        &:hover
+            background: $primary
+            color: $white
+    &-greyout
+        background: #F3F3F5
+        color: $neutral
+        &:hover
+            background: $primary
+            color: $white
+    &-error
+        cursor: not-allowed
+        &:hover
+            background: #F3F3F5 !important
+            color: $neutral !important
+
+.contact
+    .btn
+        &-primary
+            // border: 2px solid $white
+            background: $primary
+            border-color: $primary
+            color: $white
+    .header.fixed
+        .btn
+            &-primary
+                border: 2px solid $primary
+                background: $primary
+                color: $white
+                &:hover
+                    background: $white
+                    color: $primary

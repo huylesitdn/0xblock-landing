@@ -1,0 +1,152 @@
+.graph
+    position: relative
+    min-height: 500px
+    &__back-button
+        width: 41px
+        height: 41px
+        cursor: pointer
+        background: center / contain no-repeat url('../images/akar-icons_arrow-neutral.svg')
+        transform: rotate(180deg)
+        margin-right: 3rem
+        margin-top: 1rem
+    &__content
+        position: absolute
+        width: 120%
+        height: 100%
+        background: $white
+        top: 0
+        left: -10%
+        z-index: 2
+        opacity: 0
+        pointer-events: none
+        transition: opacity ease-out .2s
+        .graph__color
+            transition: none
+        &.active
+            opacity: 1
+            pointer-events: initial
+            z-index: 2
+        #graph-blue
+            background: $primary
+        #graph-orange
+            background: #FF794F
+        #graph-green
+            background: #00E878
+        #graph-violet
+            background: #BE34FF
+        #graph-lightblue
+            background: #6FDCFF
+        p
+            font-size: 22px
+            line-height: 150%
+            color: rgba($neutral, 0.6)
+            @media (max-width: 1399px)
+                font-size: 20px
+            @media (max-width: 1199px)
+                font-size: 18px
+    &__chart
+        z-index: 1
+        &.disable 
+            display: none !important
+    &__title
+        font-weight: 600
+        font-size: 24px
+        line-height: 36px
+        margin-bottom: 4rem
+        display: inline-block
+    &__graphic
+        position: relative
+    svg
+        overflow: visible !important
+        width: 100%
+        path, circle
+            transition: all ease-out .2s
+            cursor: pointer
+            transform-origin: center center
+        circle
+            transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+        circle.active
+            transform: scale(1.1)
+            transform-origin: center center
+    &__color
+        align-self: flex-start
+        display: block
+        width: 3.75rem
+        height: .5rem
+        border-radius: 1rem
+        margin-bottom: 1rem
+        position: relative
+        transition: transform ease-out .2s, background ease-out .2s
+    &__information
+        margin-bottom: 3.5rem
+        display: flex
+        flex-flow: column
+        width: intrinsic
+        width: -moz-max-content
+        width: -webkit-max-content
+        width: fit-content
+        margin-left: 6rem
+        cursor: pointer
+        @media (max-width: 992px)
+            cursor: initial
+        &:last-child
+            margin-bottom: 0
+        p 
+            align-self: center
+            font-size: 20px
+            line-height: 150%
+            transition: transform ease-out .2s
+            transform-origin: center left
+            @media (max-width: 1399px)
+                font-size: 18px
+            @media (max-width: 1199px)
+                font-size: 16px
+        #graph-blue
+            background: #AAC5FF
+        #graph-orange
+            background: #FBD6CA
+        #graph-green
+            background: #B4F5D6
+        #graph-violet
+            background: #DAC5FF
+        #graph-lightblue
+            background: #CAF2FF
+        &.active
+            #graph-blue
+                background: $primary
+            #graph-orange
+                background: #FF794F
+            #graph-green
+                background: #00E878
+            #graph-violet
+                background: #BE34FF
+            #graph-lightblue
+                background: #6FDCFF
+            p
+                transform: scale(1.2) translateX(-2rem)
+                transform-origin: center left
+            .graph__color
+                transform: translateX(-3.5rem)
+        @media (max-width: 992px)
+            margin-left: 3rem
+            .graph__color
+                width: 3.5rem
+                height: .5rem
+            p
+                font-size: 16px
+                align-self: flex-start
+                margin-bottom: 1.5rem
+            small
+                padding-left: 1rem
+            #graph-blue
+                background: $primary
+            #graph-orange
+                background: #FF794F
+            #graph-green
+                background: #00E878
+            #graph-violet
+                background: #BE34FF
+            #graph-lightblue
+                background: #6FDCFF
+        @media (max-width: 575px)
+            margin-left: 0rem

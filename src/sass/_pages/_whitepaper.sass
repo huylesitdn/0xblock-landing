@@ -1,0 +1,198 @@
+.whitepaper-page
+    background: $white
+    width: 498px
+    height: 633px
+    position: absolute
+    top: 0
+    left: 0
+    transform-origin: top left
+    overflow: hidden
+
+.whitepaper-page-mobile
+    position: relative
+    max-width: 370px
+    margin: 0 auto
+    display: flex
+    flex-flow: column
+    padding-bottom: 45px
+    border-bottom: 1px solid rgba($neutral, 0.1)
+    margin-bottom: 37px
+    &:last-child
+        border: 0
+        padding-bottom: 0
+    > * 
+        align-self: center
+    .d-flex
+        width: 100%
+    h2
+        width: 100%
+        position: relative
+        height: fit-content
+        height: intrinsic
+        font-family: $heading-font
+        font-weight: 400
+        font-size: 43px
+        line-height: 129%
+        letter-spacing: 0.055em
+        color: $neutral
+        &::after
+            display: block
+            content: ''
+            width: 34px
+            height: 4px
+            background: $primary
+            border-radius: 2px
+            bottom: -14px
+            left: 0
+            position: absolute
+    h3
+        width: 100%
+        position: relative
+        height: fit-content
+        height: intrinsic
+        font-family: $heading-font
+        font-weight: 400
+        font-size: 29px
+        line-height: 129%
+        letter-spacing: 0.055em
+        color: $neutral
+        &::after
+            display: block
+            content: ''
+            width: 34px
+            height: 3px
+            background: $primary
+            border-radius: 2px
+            bottom: -13px
+            left: 0
+            position: absolute
+    h4
+        width: 100%
+        position: relative
+        height: fit-content
+        height: intrinsic
+        font-family: $heading-font
+        font-weight: 400
+        font-size: 18px
+        line-height: 129%
+        letter-spacing: 0.055em
+        color: $neutral
+        &::after
+            display: block
+            content: ''
+            width: 21px
+            height: 1px
+            background: $primary
+            bottom: -3px
+            left: 0
+            position: absolute
+    p
+        font-size: 12px
+        line-height: 184%
+        text-align: justify
+        color: rgba($neutral, 0.8)
+        margin-bottom: 22px
+        b
+            font-size: inherit
+            font-weight: 600
+        a
+            cursor: pointer
+        &:last-child
+            margin-bottom: 0
+    small
+        font-size: 10px
+        line-height: 163.5%
+    b
+        font-size: 20px
+        line-height: 112.5%
+        margin-bottom: 20px
+    > span
+        font-size: 15px
+        line-height: 22px
+    .primary-block-before
+        position: relative
+        &::before
+            display: block
+            content: ''
+            width: calc(100% + 40px)
+            height: 100%
+            background: $primary
+            border-radius: 7px
+            position: absolute
+            top: 10px
+            left: -20px
+            z-index: -1
+
+.whitepaper-download
+    padding: 1rem
+    .btn 
+        background: $primary
+        color: $white
+        img
+            margin-left: 1rem
+
+
+.presentation
+    height: calc(100vh - 245px)
+    min-height: 720px
+    margin-bottom: 50px !important
+    .container
+        height: 100%
+    .row
+        // height: 100%
+        > div
+            // height: 100%
+            position: relative
+
+    .row-same-height
+        display: -webkit-box
+        display: -webkit-flex
+        display: -ms-flexbox
+        display:         flex
+    
+        &>[class*='col-']
+            display: flex
+            flex-direction: column
+        
+    &-menu
+        margin-right: 3rem
+        p
+            padding-left: 1rem
+    &-nav
+        margin: 2rem 0 0
+        border-top: 1px solid rgba($neutral, 0.14)
+        padding: 6rem 1rem 1rem
+        display: flex
+        flex-direction: column
+        button
+            @include regular
+            color: $neutral-60
+            margin-bottom: 2.5rem
+            align-self: flex-start
+            position: relative
+            padding: 0
+            &::after
+                display: inline-block
+                content: ''
+                background: center / contain no-repeat url('../images/akar-icons_arrow-neutral.svg')
+                width: 26px
+                height: 26px
+                position: relative
+                top: 6px
+                left: -5px
+                margin-left: 28px
+                opacity: 0
+                transition: all ease-out .2s
+            &.active
+                color: $neutral
+                &::after
+                    opacity: 1
+                    left: 0
+    @media (max-width: 1400px)
+        &-nav
+            button
+                font-size: 16px
+                margin-bottom: 1.5rem
+    @media (max-width: 1200px)
+        &-menu
+            margin-right: 1rem

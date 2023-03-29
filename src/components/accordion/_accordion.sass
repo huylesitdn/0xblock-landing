@@ -1,0 +1,140 @@
+.accordion
+    border-top: 1px solid rgba($neutral, 0.14)
+    border-bottom: 1px solid rgba($neutral, 0.14)
+    margin-bottom: 5.5rem
+    @media (max-width: 991px)
+        border: 0
+    
+.accordion-menu
+    display: flex
+    flex-direction: column
+    border-right: 1px solid rgba($neutral, 0.14)
+    padding: 4rem 1.5rem
+    height: 100%
+    button
+        align-self: flex-start
+        margin-bottom: 2.25rem
+        font-size: 20px
+        line-height: 30px
+        color: $neutral-60
+        padding-left: 3rem
+        position: relative
+        .icon
+            display: block
+            position: absolute
+            width: 25px
+            height: 25px
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+        &.active
+            color: $neutral
+    @media (max-width: 1200px)
+        button
+            font-size: 18px
+            line-height: 150%
+            margin-bottom: 2rem
+    
+.cards-container
+    &__item
+        padding: 4rem 0
+    @media (max-width: 991px)
+        &__item
+            padding: 0
+        &__title
+            font-family: $body-font
+            font-weight: 600
+            padding: 5.25rem 0 2.25rem
+            border-bottom: 1px solid rgba($neutral, 0.1)
+            &:first-child
+                padding-top: 0
+
+.card
+    border-bottom: 1px solid rgba($neutral, 0.14)
+    padding: .75rem 0
+    position: relative
+    ul
+        font-size: 18px
+        margin-bottom: 2rem
+        color: $neutral-60
+        padding-left: 3rem
+        position: relative
+        li
+            list-style: none
+            &::before
+                content: "—"
+                position: absolute
+                left: 0
+    ul.numbered-list
+        li
+            list-style-type: decimal
+            &::before
+                content: ""
+                display: none
+    button
+        font-size: 20px
+        line-height: 30px
+        padding: 1rem 0
+        margin: 0
+        width: 100%
+        cursor: pointer
+        text-align: left
+        padding-right: 4rem
+        color: $neutral
+        position: relative
+    p
+        display: inline-block
+        font-size: 16px
+        line-height: 162%
+        text-align: justify
+        color: $neutral-60
+        margin-bottom: 2rem
+        padding-right: 4rem
+        &:last-child
+            margin-bottom: 0
+    &__answer-wrapper
+        height: 0
+        overflow: hidden
+        p
+            display: block
+    &__control
+        display: block
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 0
+        width: 33px
+        height: 33px
+        &::before, &::after
+            display: block
+            content: ''
+            position: absolute
+            width: 17px
+            height: 3px
+            top: 15px
+            left: 8px
+            border-radius: 2px
+            background: $neutral-80
+        &::after
+            transform: rotate(90deg)
+            transition: transform ease-out .2s
+    &-active
+        .card__answer-wrapper
+            height: 100%
+            margin-bottom: 1rem
+        .card__control
+            &::after
+                transform: rotate(0)
+    @media (max-width: 991px)
+        border-bottom: 1px solid rgba($neutral, 0.1)
+        padding: 0
+        button
+            font-size: 18px
+            line-height: 27px
+        &__control
+            width: 27px
+            height: 27px
+            &::before, &::after
+                width: 13px
+                left: 12px
+                top: 12px

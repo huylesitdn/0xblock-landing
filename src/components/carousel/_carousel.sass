@@ -1,0 +1,202 @@
+.carousel
+    padding: 4rem 5rem 6rem
+    background: #84AAF9
+    border-radius: 13px
+    overflow-x: scroll
+    overflow-y: hidden
+    height: 100%
+    &::-webkit-scrollbar
+        display: none
+        -ms-overflow-style: nones
+        scrollbar-width: none
+    &-nav
+        position: absolute
+        width: calc(100% - 1.5rem)
+        bottom: 2.5rem
+        height: 28px
+        button
+            width: 28px
+            height: 28px
+            border: 1px solid $white
+            border-radius: 50%
+            bottom: 0
+            left: 5rem
+            position: absolute
+            cursor: pointer
+            &::after
+                display: block
+                content: ''
+                width: 14px
+                height: 14px
+                position: absolute
+                top: 6px
+                left: 6px
+                background: center / contain no-repeat url('../images/akar-icons_arrow-left.svg')
+            &:last-of-type
+                left: initial
+                right: 5rem
+                &::after
+                    transform: rotate(180deg)
+    &__inner, .scroll-content
+        height: 100%
+    &__slider
+        display: flex
+        height: 100%
+        width: fit-content
+    &__item
+        box-shadow: 0px 12px 39px rgba(0, 0, 0, 0.24)
+        margin-right: 4rem
+        flex: 0 0 auto
+        position: relative
+        &:last-child
+            margin-right: 0
+    .scrollbar-track
+        background: rgba($white, .2) !important
+        height: 2px !important
+        position: absolute
+        bottom: 2.5rem !important
+        left: 50% !important
+    .scrollbar-thumb
+        position: absolute
+        top: 0
+        left: 0
+        height: 100% !important
+        background: $white !important
+        cursor: pointer
+        border-radius: 0 !important
+
+.carousel-homepage
+    border-radius: 1.125rem
+    background: $white
+    // overflow: scroll
+    overflow: auto
+    display: flex
+    @media (max-width: 992px)
+        flex-flow: column
+    &-nav
+        position: absolute
+        width: 100%
+        bottom: 2rem
+        height: 28px
+        button
+            width: 28px
+            height: 28px
+            border: 1px solid rgba($white, .2)
+            border-radius: 50%
+            bottom: 0
+            right: 5rem
+            position: absolute
+            cursor: pointer
+            &::after
+                display: block
+                content: ''
+                width: 14px
+                height: 14px
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                background: center / contain no-repeat url('../images/akar-icons_arrow-left.svg')
+            &:last-of-type
+                left: initial
+                right: 2rem
+                &::after
+                    transform: translate(-50%, -50%) rotate(180deg)
+        @media (max-width: 992px)
+            width: 100%
+            bottom: 2rem
+            button
+                left: calc(50% - 2.5rem)
+                right: initial
+                padding: 0 !important
+                width: 32px
+                height: 32px
+                border-radius: 100%
+                &:last-of-type
+                    right: calc(50% - 2.5rem)
+    &__carousel
+        width: 55%
+        background: #0E51FF
+        position: relative
+        overflow-x: auto
+        overflow-y: hidden
+        @media (max-width: 992px)
+            width: 100%
+    &__inner, .scroll-content
+        height: 100%
+    &__inner
+        padding: 7rem 3.5rem
+        @media (max-width: 767px)
+            padding: 6rem 2rem 7rem
+    &__content
+        width: 45%
+        padding: 5rem 6rem
+        display: flex
+        flex-flow: column
+        justify-content: center
+        @media (max-width: 992px)
+            width: 100%
+        @media (max-width: 767px)
+            padding: 4rem
+        @media (max-width: 575px)
+            padding: 2rem
+    &__slider
+        display: flex
+        height: 100%
+        width: fit-content
+    &__item
+        height: intrinsic
+        height: -moz-max-content
+        height: -webkit-max-content
+        height: fit-content
+        padding: 1rem
+        background: $white
+        display: flex
+        flex-flow: column
+        margin-right: 4rem
+        border-radius: 1rem
+        padding: 1rem 1rem 1.5rem
+        text-align: center
+        height: 100%
+        &:last-child
+            margin-right: 0
+        img
+            min-width: 250px
+            border-radius: 1rem
+            margin-bottom: 1.75rem
+            @media (max-width: 575px)
+                min-width: 240px
+        span
+            font-size: 20px
+            line-height: 29px
+        p
+            margin-top: .5rem
+            font-size: 18px
+            line-height: 26px
+            color: rgba($neutral, .5)
+    .scrollbar-track
+        background: rgba($white, .2) !important
+        height: 1px !important
+        position: absolute
+        bottom: 2.5rem !important
+        left: 3.5rem !important
+        transform-origin: center left !important
+        @media (max-width: 992px)
+            left: 0 !important
+            bottom: 4.5rem !important
+            transform-origin: center !important
+    .scrollbar-thumb
+        position: absolute
+        top: 0
+        left: 0
+        height: 100% !important
+        background: $white !important
+        cursor: pointer
+        border-radius: 0 !important
+
+    h4.heading
+        &::after
+            width: 85%
+    
+    .regular
+        font-size: 20px
